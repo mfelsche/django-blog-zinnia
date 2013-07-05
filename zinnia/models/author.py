@@ -12,8 +12,6 @@ class Author(get_user_model()):
     """
     Proxy model around :class:`django.contrib.auth.models.get_user_model`.
     """
-
-    objects = get_user_model()._default_manager
     published = EntryRelatedPublishedManager()
 
     def entries_published(self):
